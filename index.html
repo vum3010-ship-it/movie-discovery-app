@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Discovery App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>🎬 Movie Discovery</h1>
+
+    <!-- Toggle Dark / Light -->
+    <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+    </label>
+</header>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Tìm phim..."
+        >
+
+        <h3>Thể loại</h3>
+        <div id="genreFilters"></div>
+
+        <hr>
+
+        <a 
+            href="bai30.html"
+            target="_blank"
+        >
+            👉 Xem Bài tập 30
+        </a>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+        <div id="movieList" class="movie-grid"></div>
+    </main>
+</div>
+
+<!-- Modal chi tiết phim -->
+<div id="movieModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <img id="modalPoster" alt="Poster phim">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDesc"></p>
+
+        <p>
+            <strong>Đạo diễn:</strong>
+            <span id="modalDirector"></span>
+        </p>
+
+        <p>
+            <strong>Diễn viên:</strong>
+            <span id="modalActors"></span>
+        </p>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
